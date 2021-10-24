@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+      - run: echo "Typical build job"
+orbs:
+  coralogix: coralogix/coralogix@0.10.0
+workflows:
+  your-workflow:
+    jobs:
+      - build
+      - coralogix/stats
