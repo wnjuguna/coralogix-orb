@@ -8,7 +8,7 @@ jobs:
 orbs:
   coralogix: coralogix/coralogix@0.10.0
 workflows:
-  stats-workflow:
+  logs-workflow:
     jobs:
       - build
-      - coralogix/stats
+      - coralogix/logs
